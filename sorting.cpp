@@ -50,7 +50,7 @@ void bubbleSort(double myArray[], int size){
 }
 
 
-int partition(double array[], int low, int high) {
+int part(double array[], int low, int high) {
   double pivot = array[high];
   int i = low-1;
   double temp = 0;
@@ -71,7 +71,7 @@ int partition(double array[], int low, int high) {
 
 void quickSort(double array[], int low, int high) {
   if(low < high) {
-    int index = partition(array, low, high);
+    int index = part(array, low, high);
     quickSort(array, low, index-1);
     quickSort(array, index+1, high);
   }
